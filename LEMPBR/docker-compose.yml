@@ -1,0 +1,59 @@
+version: '3'
+
+networks:
+   LEMPBR:
+
+services:
+    nginx:
+        image: nginx:stable-alpine
+        container_name: LEMPBR_nginx
+        ports:
+            - "8080:80"
+        volumes:
+            - ./webapps:/LEMPBR/webapps
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - ./logs:/var/log/nginx
+        depends_on:
+            - php
+        restart: on-failure
+        networks:
+            - LEMPBR
+
+    mariaDB:
+        image: mariadb:latest
+        container_name: LEMPBR_mariaDB
+        volumes:
+            - ./database:/var/lib/mysql:rw
+        ports:
+            - "3306:3306"
+        depends_on:
+            - nginx
+        environment:
+            - MYSQL_ROOT_PASSWORD=654321
+        restart: on-failure
+        networks:
+            - LEMPBR    
+
+    php:
+        image: php:7-fpm-alpine
+        container_name: LEMPPBR_php
+        volumes:
+            - ./webapps:/LEMPBR/webapps
+        ports:
+            - "9000:9000"       
+        restart: on-failure
+        networks:
+            - LEMPBR
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: LEMPBR_phpMyAdmin
+        ports:
+            - "8183:80"
+        environment:        
+            PMA_ARBITRARY: 1
+        depends_on:
+            - mariaDB
+        restart: on-failure
+        networks:
+            - LEMPBR
