@@ -60,12 +60,9 @@ phpMyAdmin: http://<ip ou nome do host>:8183
  # Utilizando
  Para usar o ambiente, basta desenvolver seus projetos na pasta "webapps" que ja está ajustada para carga do servidor web.
 
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/frekans7/docker-compose-lemp/blob/master/LEMP/code/img/LEMP.gif"><img src="https://github.com/frekans7/docker-compose-lemp/raw/master/LEMP/code/img/LEMP.gif" alt="lemp-container" style="max-width:100%;"></a></p>
-
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/serkan7/docker-compose-lemp/blob/master/LEMP/code/img/php.png"><img src="https://github.com/serkan7/docker-compose-lemp/raw/master/LEMP/code/img/php.png" alt="php" style="max-width:100%;"></a></p>
-
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/serkan7/docker-compose-lemp/blob/master/LEMP/code/img/phpMyAdmin.png"><img src="https://github.com/serkan7/docker-compose-lemp/raw/master/LEMP/code/img/phpMyAdmin.png" alt="phpMyAdmin" style="max-width:100%;"></a>
-
+![lemp-container](https://github.com/frekans7/docker-compose-lemp/blob/master/LEMP/code/img/LEMP.gif)
+![php](https://github.com/serkan7/docker-compose-lemp/blob/master/LEMP/code/img/php.png)                                     
+![phpMyAdmin](https://github.com/serkan7/docker-compose-lemp/blob/master/LEMP/code/img/phpMyAdmin.png)
 # Projeto base
 frekans7/docker-compose-lemp
  
