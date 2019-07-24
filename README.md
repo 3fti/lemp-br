@@ -3,7 +3,9 @@
 
 # Preparação
 sudo apt-get update && sudo apt-get install nano \
-cd LEMP-br \
+cd lemp-br \
+mv LEMPBR .. \
+cd ../LEMPBR \
 nano docker-compose.yml
 
 # Ajustes
