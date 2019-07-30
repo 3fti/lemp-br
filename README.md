@@ -1,5 +1,5 @@
 # LEMP-br
- Um simples LEMP usando o Repositório oficial Docker para Alpine Linux, Nginx, MariaDB, PHP e phpMyAdmin
+ LEMP usando o Repositório oficial Docker para Alpine Linux, Nginx, MariaDB, PHP e phpMyAdmin | Compatível com Raspbery, Orange PI e familia
 
 # Preparação
 sudo apt-get update && sudo apt-get install nano \
@@ -59,6 +59,9 @@ phpMyAdmin: http://<ip ou nome do host>:8183
  
  # Utilizando
  Para usar o ambiente, basta desenvolver seus projetos na pasta "webapps" que ja está ajustada para carga do servidor web.
+
+# Compatibilidade Especial
+Compatível com Raspbery, Orange PI e familia.. projeto desenvolvido em um Orange PI PC(armv7)
 
 ![lemp-container](https://github.com/frekans7/docker-compose-lemp/blob/master/LEMP/code/img/LEMP.gif)
 ![php](https://github.com/serkan7/docker-compose-lemp/blob/master/LEMP/code/img/php.png)                                     
